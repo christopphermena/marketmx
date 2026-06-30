@@ -1,0 +1,24 @@
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.card-hover:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.btn-hover-scale:hover {
+  transform: scale(1.05) !important;
+}
+
+.nav-link-hover:hover {
+  color: var(--bs-danger) !important;
+}
+
+.footer-link:hover {
+  color: var(--bs-danger) !important;
+}
