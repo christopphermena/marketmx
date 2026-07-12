@@ -1,22 +1,23 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Servicios from './components/Servicios'
-import Procesos from './components/Procesos'
-import Galeria from './components/Galeria'
-import Contacto from './components/Contacto'
-import Footer from './components/Footer'
+import LandingPage from './pages/LandingPage'
+import VerSolicitudes from './pages/VerSolicitudes'
+import AgregarSolicitud from './pages/AgregarSolicitud'
+import EditarSolicitud from './pages/EditarSolicitud'
+import EliminarSolicitud from './pages/EliminarSolicitud'
 
 function App() {
   return (
-    <div className="app">
+    <BrowserRouter>
       <Navbar />
-      <Hero />
-      <Servicios />
-      <Procesos />
-      <Galeria />
-      <Contacto />
-      <Footer />
-    </div>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/ver" element={<VerSolicitudes />} />
+        <Route path="/agregar" element={<AgregarSolicitud />} />
+        <Route path="/editar/:id" element={<EditarSolicitud />} />
+        <Route path="/eliminar/:id" element={<EliminarSolicitud />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
